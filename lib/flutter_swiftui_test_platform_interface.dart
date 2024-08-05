@@ -3,12 +3,10 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 import 'flutter_swiftui_test_method_channel.dart';
 
 abstract class FlutterSwiftuiTestPlatform extends PlatformInterface {
-  /// Constructs a FlutterSwiftuiTestPlatform.
-  FlutterSwiftuiTestPlatform() : super(token: _token);
-
   static final Object _token = Object();
 
-  static FlutterSwiftuiTestPlatform _instance = MethodChannelFlutterSwiftuiTest();
+  static FlutterSwiftuiTestPlatform _instance =
+      MethodChannelFlutterSwiftuiTest();
 
   /// The default instance of [FlutterSwiftuiTestPlatform] to use.
   ///
@@ -23,7 +21,14 @@ abstract class FlutterSwiftuiTestPlatform extends PlatformInterface {
     _instance = instance;
   }
 
+  /// Constructs a FlutterSwiftuiTestPlatform.
+  FlutterSwiftuiTestPlatform() : super(token: _token);
+
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  void listenToMessages(void Function(String) onMsgReceived) {
+    throw UnimplementedError('listenToMessages() has not been implemented.');
   }
 }

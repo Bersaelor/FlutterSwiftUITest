@@ -11,7 +11,16 @@ class MethodChannelFlutterSwiftuiTest extends FlutterSwiftuiTestPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
+  }
+
+  // listen to methodChannel messages
+  @override
+  void listenToMessages(void Function(String) onMsgReceived) {
+    methodChannel.setMethodCallHandler((call) async {
+      onMsgReceived.call(call.method);
+    });
   }
 }

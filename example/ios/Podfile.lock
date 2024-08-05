@@ -20,9 +20,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_swiftui_test: ffb70e926ae5ca860b55ae212079131951e6f799
-  integration_test: ce0a3ffa1de96d1a89ca0ac26fca7ea18a749ef4
+  flutter_swiftui_test: ddd6b0f43ed1ee37dad9f7299fda5b6f0dcb300e
+  integration_test: 97cfe7f8fb18d2aee80c57b5aa78d83e743af373
 
-PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+PODFILE CHECKSUM: 654deecfd69a6ac2d6eaa5787bfd9b27239ed24c
 
 COCOAPODS: 1.15.2
